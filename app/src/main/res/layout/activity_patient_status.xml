@@ -1,8 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     tools:context="com.mittens.healthhacks.PatientStatusActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ScrollView
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent">
+
+        <RelativeLayout
+            android:layout_height="match_parent"
+            android:layout_width="match_parent">
+
+            <TextView
+                android:id="@+id/patient_name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Patient Name" />
+
+            <TextView
+                android:id="@+id/patient_age"
+                android:layout_below="@+id/patient_name"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:text="Age" />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/heart_rate_graph"
+                android:layout_below="@+id/patient_age"
+                android:layout_height="200dip"
+                android:layout_width="match_parent" />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/spo2_graph"
+                android:layout_below="@+id/heart_rate_graph"
+                android:layout_height="200dip"
+                android:layout_width="match_parent" />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/blood_pressure_graph"
+                android:layout_below="@+id/spo2_graph"
+                android:layout_height="200dip"
+                android:layout_width="match_parent" />
+
+            <com.jjoe64.graphview.GraphView
+                android:id="@+id/temperature_graph"
+                android:layout_below="@id/blood_pressure_graph"
+                android:layout_height="200dip"
+                android:layout_width="match_parent" />
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
