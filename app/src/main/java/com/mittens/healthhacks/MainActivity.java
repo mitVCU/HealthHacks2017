@@ -7,6 +7,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import android.os.Bundle;
+import android.util.Log;
+
+import com.google.firebase.iid.FirebaseInstanceId;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -28,6 +31,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        FirebaseInstanceId.getInstance().getToken();
+        Log.d("Look: ",FirebaseInstanceId.getInstance().getToken());
         roomList = (RecyclerView) findViewById(R.id.rooms_rv);
         onCallButton = (Button) findViewById(R.id.on_call_button);
         roomList.setLayoutManager(new LinearLayoutManager(this));

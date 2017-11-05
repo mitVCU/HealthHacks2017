@@ -1,4 +1,4 @@
-package com.mittens.healthhacks.Services;
+package com.mittens.healthhacks;
 
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
