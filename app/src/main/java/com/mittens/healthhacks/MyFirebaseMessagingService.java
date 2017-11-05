@@ -1,5 +1,8 @@
 package com.mittens.healthhacks;
 
+import com.google.firebase.messaging.FirebaseMessagingService;
+import com.google.firebase.messaging.RemoteMessage;
+
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.Context;
@@ -9,8 +12,6 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
-import com.google.firebase.messaging.FirebaseMessagingService;
-import com.google.firebase.messaging.RemoteMessage;
 import com.mittens.healthhacks.MainActivity;
 import com.mittens.healthhacks.R;
 
@@ -20,6 +21,7 @@ import com.mittens.healthhacks.R;
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
     private static final String TAG = "FCM Service";
+
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         // TODO: Handle FCM messages here.
@@ -29,11 +31,11 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         Log.d(TAG, "From: " + remoteMessage.getFrom());
         Log.d(TAG, "Notification Message Body: " + remoteMessage.getNotification().getBody());
         if (remoteMessage.getData().size() > 0) {
-            Log.d(TAG, "Message data: "+remoteMessage.getData());
+            Log.d(TAG, "Message data: " + remoteMessage.getData());
         }
 
-        if (remoteMessage.getNotification() != null){
-            Log.d(TAG, "Message body: "+remoteMessage.getNotification().getBody());
+        if (remoteMessage.getNotification() != null) {
+            Log.d(TAG, "Message body: " + remoteMessage.getNotification().getBody());
             sendNotification(remoteMessage.getNotification().getBody());
         }
     }
@@ -52,7 +54,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
                 .setAutoCancel(true)
                 .setSound(notificationSound)
                 .setContentIntent(pendingIntent);
-        NotificationManager notificationManager = (NotificationManager)getSystemService(Context.NOTIFICATION_SERVICE);
+        NotificationManager notificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
         notificationManager.notify(0, notiB.build());
 
     }
