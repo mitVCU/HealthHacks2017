@@ -81,6 +81,7 @@ public class PatientStatusActivity extends AppCompatActivity {
                 temperateGraph.getViewport().setMinY(50);
                 temperateGraph.getViewport().setMaxY(125);
                 temperateGraph.getViewport().setScalable(true);
+                temperateGraph.getViewport().setScrollable(true);
 
                 spo2Graph.addSeries(new LineGraphSeries<>(spo2Data.toArray(new DataPoint[] {})));
                 spo2Graph.setTitle("SpO2");
@@ -89,6 +90,7 @@ public class PatientStatusActivity extends AppCompatActivity {
                 spo2Graph.getViewport().setMinY(50);
                 spo2Graph.getViewport().setMaxY(100);
                 spo2Graph.getViewport().setScalable(true);
+                spo2Graph.getViewport().setScrollable(true);
 
                 bloodPressureGraph.addSeries(new LineGraphSeries<>(bloodPressureData.toArray(new DataPoint[] {})));
                 bloodPressureGraph.setTitle("Systolic Blood Pressure");
@@ -97,6 +99,7 @@ public class PatientStatusActivity extends AppCompatActivity {
                 bloodPressureGraph.getViewport().setMinY(20);
                 bloodPressureGraph.getViewport().setMaxY(150);
                 bloodPressureGraph.getViewport().setScalable(true);
+                bloodPressureGraph.getViewport().setScrollable(true);
 
                 heartRateGraph.addSeries(new LineGraphSeries<>(heartRateData.toArray(new DataPoint[] {})));
                 heartRateGraph.setTitle("Heart Rate");
@@ -105,6 +108,7 @@ public class PatientStatusActivity extends AppCompatActivity {
                 heartRateGraph.getViewport().setMinY(0);
                 heartRateGraph.getViewport().setMaxY(300);
                 heartRateGraph.getViewport().setScalable(true);
+                heartRateGraph.getViewport().setScrollable(true);
 
             }
 
