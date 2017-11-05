@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1086929577049",
+    "firebase_url": "https://healthhacks2017-ec6bf.firebaseio.com",
+    "project_id": "healthhacks2017-ec6bf",
+    "storage_bucket": "healthhacks2017-ec6bf.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086929577049:android:d69b946619b9984b",
+        "android_client_info": {
+          "package_name": "com.mittens.healthhacks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086929577049-stro4pblmb04p7gi87lf0lb78v2cbh28.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDlfK5Yw7j3VSWnywDuXO1-QXaqEVdr7A4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
