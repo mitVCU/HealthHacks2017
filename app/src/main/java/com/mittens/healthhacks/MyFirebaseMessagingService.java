@@ -1,4 +1,4 @@
-package com.mittens.healthhacks.Services;
+package com.mittens.healthhacks;
 
 import android.app.NotificationManager;
 import android.app.PendingIntent;
